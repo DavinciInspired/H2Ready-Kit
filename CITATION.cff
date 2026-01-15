@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use H2Ready in your work, please cite it as below."
+title: "H2Ready: A Hybrid Physics–Domain Framework for Hydrogen Readiness of Pipelines"
+authors:
+  - family-names: "Owuamanam"
+    given-names: "David"
+year: 2025
+version: "1.0.0"
+url: "https://github.com/<your-username>/h2ready"
