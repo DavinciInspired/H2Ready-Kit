@@ -57,7 +57,7 @@ H2Ready addresses this by:
 ## 🚀 Quickstart
 
 ```bash
-git clone https://github.com/<your-username>/h2ready.git
+git clone https://github.com/<DavinciInspired>/h2ready.git
 cd h2ready
 docker compose up --build
 ```
