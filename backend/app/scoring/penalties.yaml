@@ -1,0 +1,188 @@
+weights:
+  M: 0.25
+  D: 0.2
+  I: 0.2
+  C: 0.15
+  E: 0.1
+  Q: 0.05
+  O: 0.05
+M:
+  hardness:
+  - min: 275
+    pen: 0.5
+    label: "HAZ hardness \u2265275 HV"
+  - min: 260
+    pen: 0.25
+    label: "HAZ hardness 260\u2013274 HV"
+  - min: 240
+    pen: 0.1
+    label: "HAZ hardness 240\u2013259 HV"
+  yt_ratio:
+  - min: 0.9
+    pen: 0.2
+    label: "Y/T ratio \u22650.90"
+  - min: 0.85
+    pen: 0.1
+    label: "Y/T ratio 0.85\u20130.89"
+  seam:
+    erw_pre1970: 0.3
+    erw: 0.1
+D:
+  stress_ratio:
+  - min: 0.72
+    pen: 0.45
+    label: "Stress ratio \u22650.72"
+  - min: 0.6
+    pen: 0.2
+    label: "Stress ratio 0.60\u20130.71"
+  cycling:
+  - cycles_min: 10
+    range_min: 6
+    pen: 0.25
+    label: "High cycling (\u226510/day & \u22656 bar)"
+  - cycles_min: 5
+    range_min: 4
+    pen: 0.15
+    label: "Moderate cycling (\u22655/day & \u22654 bar)"
+  - cycles_min: 2
+    range_min: 3
+    pen: 0.08
+    label: "Noticeable cycling (\u22652/day & \u22653 bar)"
+  range_only:
+  - min: 7
+    pen: 0.15
+    label: "Large cycle range \u22657 bar"
+  - min: 5
+    pen: 0.08
+    label: "Cycle range 5\u20136.9 bar"
+  surges:
+  - min: 20
+    pen: 0.2
+    label: "Frequent surges \u226520/yr"
+  - min: 5
+    pen: 0.1
+    label: "Some surges 5\u201319/yr"
+  dpdt:
+  - min: 1.0
+    pen: 0.15
+    label: "High dp/dt (P95 \u22651.0 bar/s)"
+  - min: 0.5
+    pen: 0.08
+    label: "Moderate dp/dt (P95 0.5\u20130.99 bar/s)"
+I:
+  crack_density:
+  - min: 1.0
+    pen: 0.5
+    label: "Crack density \u22651.0/km"
+  - min: 0.3
+    pen: 0.2
+    label: "Crack density 0.3\u20130.99/km"
+  crack_len:
+  - min: 50
+    pen: 0.2
+    label: "Max crack length \u226550 mm"
+  - min: 20
+    pen: 0.1
+    label: "Max crack length 20\u201349 mm"
+  metal_loss:
+  - min: 40
+    pen: 0.4
+    label: "Metal loss \u226540% WT"
+  - min: 25
+    pen: 0.2
+    label: "Metal loss 25\u201339% WT"
+  - min: 15
+    pen: 0.1
+    label: "Metal loss 15\u201324% WT"
+  backlog_pen: 0.1
+C:
+  coating_type:
+    tape: 0.35
+    coal_tar: 0.2
+  coating_age:
+  - min: 30
+    pen: 0.15
+    label: "Coating age \u226530y"
+  - min: 20
+    pen: 0.08
+    label: "Coating age 20\u201329y"
+  dcvg:
+  - min: 40
+    pen: 0.3
+    label: "DCVG anomalies \u226540%"
+  - min: 20
+    pen: 0.15
+    label: "DCVG anomalies 20\u201339%"
+  overprot:
+  - min: 20
+    pen: 0.2
+    label: "Overprotection \u226520% time"
+  - min: 10
+    pen: 0.1
+    label: "Overprotection 10\u201319% time"
+  pot_screen:
+    min: -1.25
+    pen: 0.05
+    label: Very negative CP potential (screening)
+E:
+  resistivity:
+  - max: 500
+    pen: 0.35
+    label: "Soil resistivity <500 \u03A9\xB7cm"
+  - max: 1000
+    pen: 0.2
+    label: "Soil resistivity 500\u2013999 \u03A9\xB7cm"
+  ph:
+    acid:
+      max: 5.5
+      pen: 0.1
+      label: "Acidic soil pH \u22645.5"
+    alk:
+      min: 9.0
+      pen: 0.08
+      label: "Alkaline soil pH \u22659.0"
+  mic:
+    high: 0.25
+    medium: 0.1
+  moist_pen: 0.08
+  stray:
+    high: 0.12
+    medium: 0.06
+Q:
+  ili:
+  - max: 70
+    pen: 0.35
+    label: ILI coverage <70%
+  - max: 90
+    pen: 0.15
+    label: "ILI coverage 70\u201389%"
+  cp_age:
+  - min: 36
+    pen: 0.2
+    label: CP survey age >36 months
+  - min: 18
+    pen: 0.1
+    label: "CP survey age 19\u201336 months"
+  scada:
+  - max: 95
+    pen: 0.15
+    label: SCADA uptime <95%
+  - max: 99
+    pen: 0.05
+    label: "SCADA uptime 95\u201398.9%"
+  missing:
+  - min: 30
+    pen: 0.3
+    label: "Missing fields \u226530%"
+  - min: 15
+    pen: 0.15
+    label: "Missing fields 15\u201329%"
+  - min: 5
+    pen: 0.05
+    label: "Missing fields 5\u201314%"
+O:
+  no_plan: 0.3
+  no_sensors: 0.1
+  no_proc: 0.15
+  no_leak: 0.1
+  no_training: 0.05
